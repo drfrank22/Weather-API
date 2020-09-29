@@ -15,18 +15,37 @@
       </div>
     <div class="container row">
         <div class="container col-md-4">
-            <form class="form-inline mr-auto row" id="search-bar">
+            <form class="form-inline mr-auto row">
                 <p>Search for a city:</p>
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
+                <input id="searchBar" class="form-control mr-sm-2" type="text" placeholder="City Name" aria-label="Search">
+                <button id="submitBtn" class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
             </form>
             <div class="row" id="previous-search">
                 Previous Searches Here
             </div>
         </div>  
         <div class="col-md-8" id="current-temp">
-                Current Forecast Here
-            </div>
+                <div class="container row">
+                    <div class="col-md-12" id="cityName">
+                        City:
+                    </div>
+                    <div class="col-md-12" id="date">
+                        Date:
+                    </div>
+                    <div class="col-md-12" id="icon">
+                        icon
+                    </div>
+                    <div class="col-md-12" id="temp">
+                        Temp:
+                    </div>
+                    <div class="col-md-12" id="humidity">
+                        Humidity:
+                    </div>
+                    <div class="col-md-12" id="windSpeed">
+                        Wind Speed:
+                    </div>
+                </div>
+        </div>
             <div class="container row">
                 <div class="col-md-12" id="five-day">
                 5 Day Forecast Here
@@ -37,7 +56,7 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
