@@ -24,27 +24,23 @@
                 Previous Searches Here
             </div>
         </div>  
-        <div class="col-md-8" id="current-temp">
-                <div class="container row">
-                    <div class="col-md-12" id="cityName">
-                        City:
+        <div class="col-lg-8">
+            <div id="card" class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img id="weatherIcon" src="..." class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body" id="currentConditions">
+                      <h5 id="currentCity" class="card-title">City</h5>
+                      <h6 id="currentDate" class="card-title">Date</h6>
+                      <p id="currentTemp" class="card-text">Temp</p>
+                      <p id="currentHumidity" class="card-text">Humidity</p>
+                      <p id="currentWindSpeed" class="card-text">Wind Speed</p>
                     </div>
-                    <div class="col-md-12" id="date">
-                        Date:
-                    </div>
-                    <div class="col-md-12" id="icon">
-                        icon
-                    </div>
-                    <div class="col-md-12" id="temp">
-                        Temp:
-                    </div>
-                    <div class="col-md-12" id="humidity">
-                        Humidity:
-                    </div>
-                    <div class="col-md-12" id="windSpeed">
-                        Wind Speed:
-                    </div>
+                  </div>
                 </div>
+              </div>
         </div>
             <div class="container row">
                 <div class="col-md-12" id="five-day">
@@ -58,5 +54,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 </html>
