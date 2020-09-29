@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Weather Dashboard</h1>
+        </div>
+      </div>
+    <div class="container row">
+        <div class="container col-md-4">
+            <form class="form-inline mr-auto row" id="search-bar">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
+            </form>
+            <div class="row" id="previous-search">
+                Previous Searches Here
+            </div>
+        </div>  
+        <div class="container col-md-8">
+            <div class="row" id="current-temp">
+                Current Forecast Here
+            </div>
+            <div class="row" id="five-day">
+                5 Day Forecast Here
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
