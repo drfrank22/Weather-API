@@ -14,23 +14,23 @@
         </div>
       </div>
     <div class="container row">
-        <div class="container col-md-4">
+        <div class="container col-md-3">
             <form class="form-inline mr-auto row">
                 <p>Search for a city:</p>
-                <input id="searchBar" class="form-control mr-sm-2" type="text" placeholder="City Name" aria-label="Search">
+                <input id="searchBar" class="form-control mr-sm-2" type="text" placeholder="City Name Only" aria-label="Search">
                 <button id="submitBtn" class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
             </form>
             <div class="row" id="previous-search">
                 Previous Searches Here
             </div>
         </div>  
-        <div class="col-lg-8">
-            <div id="card" class="card mb-3" style="max-width: 540px;">
+        <div class="col-lg-9">
+            <div id="card" class="card mb-3 row" style="max-width: 540px;">
                 <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col-md-2">
                     <img id="weatherIcon" src="..." class="card-img" alt="...">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-10">
                     <div class="card-body" id="currentConditions">
                       <h5 id="currentCity" class="card-title">City</h5>
                       <h6 id="currentDate" class="card-title">Date</h6>
@@ -41,12 +41,29 @@
                   </div>
                 </div>
               </div>
-        </div>
-            <div class="container row">
-                <div class="col-md-12" id="five-day">
+              <div id="forecast" class="container row">
+                <!-- <div class="col-md-12" id="five-day">
                 5 Day Forecast Here
-                </div>
+                </div> -->
+                <div id="fiveDay" class="card mb-3 row" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-2">
+                        <img id="weatherIcon" src="..." class="card-img" alt="...">
+                      </div>
+                      <div class="col-md-10">
+                        <div class="card-body" id="forecastConditions">
+                          <h5 id="forecastCity" class="card-title">City</h5>
+                          <h6 id="forecastDate" class="card-title">Date</h6>
+                          <p id="forecastTemp" class="card-text">Temp</p>
+                          <p id="forecastHumidity" class="card-text">Humidity</p>
+                          <p id="forecastWindSpeed" class="card-text">Wind Speed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
+        </div>
+            
 
     </div>
 
