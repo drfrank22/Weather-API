@@ -49,8 +49,13 @@ $("#submitBtn").on("click", function() {
     // Call Functions
     // showCurrentConditions();
     showForecast();
-    // showSearchList();
+    makeList();
 });
+
+function makeList() {
+    var listItem = $("<li>").addClass("list-group-item").text(city);
+    $("#list").append(listItem);
+};
 
 // Function displaying 5 day forecast.
 function showForecast (response) {
@@ -64,22 +69,32 @@ function showForecast (response) {
     console.log(days);
 
     for (i = 0; i < days.length; i++) {
-        if (days[i].dt_txt.indexOf("12:00:00") !== -1){
+        if (days[i].dt_txt.indexOf("12:00:00")){
 
             var tempF = (days[i].main.temp - 273.15) * 1.80 + 32;
             tempF = Math.floor(tempF);
 
-            var card = $("#fiveDay").addClass("card col-md-2 ml-4 bg-primary text-white");
-            var cardBody = $("<div>").addClass("card-body p-3 forecastBody")
-            var cityDate = $("<h4>").addClass("card-title").text(days[i].dt_txt);
-            var temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
-            var humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + results[i].main.humidity + "%");
+            // var card = $("#fiveDay").addClass("card col-md-2 ml-4 bg-primary text-white");
+            // var cardBody = $("<div>").addClass("card-body p-3 forecastBody")
+            // var cityDate = $("<h4>").addClass("card-title").text(days[i].dt_txt);
+            // var temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
+            // var humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + days[i].main.humidity + "%");
 
-            var image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + results[i].weather[0].icon + ".png")
+            // var image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + days[i].weather[0].icon + ".png")
 
-            cardBody.append(cityDate, image, temperature, humidity);
-            card.append(cardBody);
-            $(card).append$("#forecast");
+            // cardBody.append(cityDate, image, temperature, humidity);
+            // card.append(cardBody);
+            // $(card).append$("#forecast");
+
+            var cardBody = $("#forecastConditions");
+            $("#weatherIconCard").attr("src", "https://openweathermap.org/img/w/" + days[i].weather[0].icon + ".png");
+            var forecastCity = $("#forecastCity").text(city);
+            var forecastDate = $("#forecastDate").text(moment().format("MMMM Do YYYY"));
+            var forecastTemp = $("#forecastTemp").text("Temperature: " + tempF + " °F");
+            var forecastHumidity = $("#forecastHumidity").text("Humidity: " + days[i].main.humidity + "%");
+            var forecastWindSpeed = $("#forecastWindSpeed").text("Wind Speed: " + days[i].wind.speed + " MPH");
+        
+            cardBody.append(forecastCity, forecastDate, forecastTemp, forecastHumidity, forecastWindSpeed);
 
         }
     }
